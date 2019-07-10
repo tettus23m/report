@@ -1,0 +1,6 @@
+create table people ( id int auto_increment not null primary key, name varchar(100) );
+create table race ( id int auto_increment not null primary key, name varchar(100) );
+create table result ( id int auto_increment not null primary key, year int, people_id int, people_id int, people_id int );
+load data local infile 'people.csv' into table people fields terminated by ',' enclosed by '"';
+load data local infile 'race.csv' into table race fields terminated by ',' enclosed by '"';
+load data local infile 'result.csv' into table result fields terminated by ',' enclosed by '"';
