@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    connection.query('select id, year, racename from result;', (error, rows, fields) => {
+    connection.query('select id, racename from result where year=2019;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
@@ -23,5 +23,3 @@ server.get('/', function( req, res ) {
 server.listen( 80, function() {
     console.log( 'listening on port 80' );
 });
-
-© 2019 GitHub, Inc.
