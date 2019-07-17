@@ -12,11 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    let sorting = req.query.sorting || '人口';
-    let number = req.query.number || 10;
-    let query = 'select id, 都道府県, ' + sorting + ' from example order by ' + sorting + ' desc limit ' + number + ';';
-    console.log( query );
-    connection.query( query, (error, rows, fields) => {
+    connection.query('select id, year, racename from result;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
