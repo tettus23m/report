@@ -15,7 +15,7 @@ server.get('/', function( req, res ) {
     connection.query('select id, racename, people_id1, people_id2, people_id3
                      from result
                      inner join race on
-                     result.racename = race.name
+                     result.racename = race.racename
                      inner join people on 
                      result.people_id1 = people.id,
                      result.people_id2 = people.id,
