@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    connection.query('select race.racename, people.peoplename
+    connection.query('select result.id, race.racename, people.peoplename
                      from result
                      inner join race on
                      result.racename = race.id
