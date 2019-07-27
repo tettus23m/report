@@ -12,14 +12,12 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    connection.query('select id, racename, people_id1, people_id2, people_id3
+    connection.query('select race.racename, people.peoplename
                      from result
                      inner join race on
-                     result.racename = race.racename
+                     result.racename = race.id
                      inner join people on 
-                     result.people_id1 = people.id,
-                     result.people_id2 = people.id,
-                     result.people_id3 = people.id
+                     result.people_id1 = people.id
                      where year = 2019;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
