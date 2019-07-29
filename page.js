@@ -12,7 +12,12 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    res.render( 'sql.ejs', { content: rows });
+    connection.query((error, rows, fields) => {
+        if( error ) {
+            console.log('Query Error');
+        }
+        res.render( 'sql1.ejs', { content: rows });
+    });
 });
 
 
