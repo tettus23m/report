@@ -12,6 +12,10 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
+    res.render( 'sql.ejs', { content: rows });
+});
+
+server.get('/result', function( req, res ) {
     connection.query('select race.racename, people.peoplename from result 
                      inner join race on result.racename = race.id 
                      inner join people on result.people_id1 = people.id
@@ -19,7 +23,7 @@ server.get('/', function( req, res ) {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql.ejs', { content: rows });
+        res.render( 'sql1.ejs', { content: rows });
     });
 });
 
