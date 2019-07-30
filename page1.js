@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
-    connection.query('select race.id from race;', (error, rows, fields) => {
+    connection.query('select id from race;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
         }
