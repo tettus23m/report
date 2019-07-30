@@ -80,6 +80,15 @@ server.get('/result2015', function( req, res ) {
     });
 });
 
+server.get('/', function( req, res ) {
+    connection.query('select;', (error, rows, fields) => {
+        if( error ) {
+            console.log('Query Error');
+        }
+        res.render( 'sql6.ejs', { content: rows });
+    });
+});
+
 server.listen( 80, function() {
     console.log( 'listening on port 80' );
 });
