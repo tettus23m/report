@@ -12,6 +12,15 @@ var connection = mysql.createConnection({
 });
 
 server.get('/', function( req, res ) {
+    connection.query(';', (error, rows, fields) => {
+        if( error ) {
+            console.log('Query Error');
+        }
+        res.render( 'sql.ejs', { content: rows });
+    });
+});
+
+server.get('/result2019', function( req, res ) {
     connection.query('select race.racename, people.peoplename from result \
                      inner join race on result.racename = race.id \
                      inner join people on result.people_id1 = people.id \
