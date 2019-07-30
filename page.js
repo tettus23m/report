@@ -40,7 +40,7 @@ server.get('/result2018', function( req, res ) {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql1.ejs', { content: rows });
+        res.render( 'sql2.ejs', { content: rows });
     });
 });
 
@@ -52,7 +52,7 @@ server.get('/result2017', function( req, res ) {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql1.ejs', { content: rows });
+        res.render( 'sql3.ejs', { content: rows });
     });
 });
 
@@ -64,7 +64,7 @@ server.get('/result2016', function( req, res ) {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql1.ejs', { content: rows });
+        res.render( 'sql4.ejs', { content: rows });
     });
 });
 
@@ -76,7 +76,7 @@ server.get('/result2015', function( req, res ) {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql1.ejs', { content: rows });
+        res.render( 'sql5.ejs', { content: rows });
     });
 });
 
