@@ -83,7 +83,7 @@ server.get('/result2015', function( req, res ) {
 server.get('/', function( req, res ) {
     connection.query('select people.peoplename, count(people_id1) from result \
                      inner join people on result.people_id1 = people.id \
-                     group by people_id1
+                     group by people_id1 \
                      order by count(people_id1) desc limit 10;', (error, rows, fields) => {
         if( error ) {
             console.log('Query Error');
