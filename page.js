@@ -80,7 +80,7 @@ server.get('/result2015', function( req, res ) {
     });
 });
 
-server.get('/', function( req, res ) {
+server.get('/ranking', function( req, res ) {
     connection.query('select people.peoplename, count(people_id1) from result \
                      inner join people on result.people_id1 = people.id \
                      group by people_id1 \
