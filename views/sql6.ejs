@@ -8,7 +8,9 @@
         <h1>選手ランキング上位10名</h1>
         <% for( let result of content ) { %>
         <tr>
-            <td><%= result['peoplename'] %></td>
+        <ol>
+            <li><td><%= result['peoplename'] %></td></li>
+        </ol>
         </tr>
         <% } %>
     </table>
