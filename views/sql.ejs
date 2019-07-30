@@ -5,10 +5,9 @@
 </head>
 <body>
     <table>
-        <% for( let race, people of content ) { %>
+        <% for( let race of content ) { %>
         <tr>
             <td><%= race['racename'] %></td>
-            <td><%= people['peoplename'] %></td>
         </tr>
         <% } %>
     </table>
