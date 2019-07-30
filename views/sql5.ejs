@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang=ja>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <table>
+        <h1>2015レース結果</h1>
+        <% for( let result of content ) { %>
+        <tr>
+            <td><%= result['racename'] %></td>
+            <td><%= result['peoplename'] %></td>
+        </tr>
+        <% } %>
+    </table>
+ 
+</body>
+</html>
