@@ -6,7 +6,7 @@
 <body>
     <table>
         <h1>選手ランキング上位10名</h1>
-        <% for( let result of content ) { %>
+        <% for( let result, count of content ) { %>
         <tr>
             <td><%= result['peoplename'] %></td>
             \\<td><%= count(people_id1) %></td>
