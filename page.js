@@ -16,7 +16,7 @@ server.get('/', function( req, res ) {
         if( error ) {
             console.log('Query Error');
         }
-        res.render( 'sql2.ejs', { content: rows });
+        res.render( 'sql.ejs', { content: rows });
     });
 });
 
